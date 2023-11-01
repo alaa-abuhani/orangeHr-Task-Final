@@ -3,10 +3,11 @@ export default class timePage {
     cy.visit("/time/viewMyTimesheet");
     cy.get(".oxd-button--ghost").click();
   }
-  timeView(){
+  timeView() {
     cy.visit("/time/viewEmployeeTimesheet");
   }
-  timeAssertion(name:string){
+  //assetion time
+  timeAssertion(name: string) {
     cy.get(".oxd-table").should("contain", name);
   }
 }
