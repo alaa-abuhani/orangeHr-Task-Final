@@ -7,7 +7,7 @@ const loginObj: login = new login();
 const empObj: employee = new employee();
 let empNumber: number;
 
-describe("time functionality ", () => {
+describe("time functionality", () => {
   beforeEach(() => {
     cy.intercept("/web/index.php/dashboard/index").as("loginpage");
     cy.visit("/");
@@ -16,7 +16,7 @@ describe("time functionality ", () => {
     cy.get("@logininfo").then((logininfo: any) => {
       loginObj.loginValid(logininfo[0].Username, logininfo[0].Password);
     });
-    // add employee account
+    //add employee account
     cy.get("@EmpInfo").then((EmpInfo: any) => {
       empObj
         .addEmloyeeViaAPI(

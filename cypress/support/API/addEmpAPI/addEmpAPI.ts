@@ -40,7 +40,7 @@ export default class employee {
 
   deleteEmployee(empNumbe: number) {
     cy.request({
-      // delete the created employee
+      //delete the created employee
       method: "DELETE",
       url: "/api/v2/pim/employees",
       body: {
